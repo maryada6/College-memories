@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  /* overflow: hidden; */
+}
+
+body {
+  background-color: #3ac3ed;
+}
+
+header {
+  position: sticky;
+  background-color: black;
+  z-index: 10;
+  top: 0;
+}
+
+@keyframes load {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.progress {
+  height: 3px;
+  display: block;
+  background-color: red;
+  animation: load 1s ease-in  1;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: right !important;
+  list-style: none;
+}
+
+header ul a {
+  text-decoration: none;
+  margin: 10px 7px;
+}
+
+.quote {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+header ul li ,.error-btn{
+  color: white;
+  padding: 0px 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  border-radius: 18%;
+  border: 3px solid darkgoldenrod;
+  list-style-type: none;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 60px;
+  width: 95%;
+  box-sizing: border-box;
+  font-style: italic;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.title span {
+  font-family: "Pattaya", sans-serif;
+  border-bottom: solid 10px darkgoldenrod;
+}
+
+.container {
+  border: 2px solid black;
+  color: aliceblue;
+  padding: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin: 25px 2px;
+}
+.column {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 40%;
+  margin: 5px;
+  align-items: center;
+}
+
+@keyframes updown {
+  0% {
+    width: 90%;
+    opacity: 0.3;
+  }
+
+  50% {
+    width: 80%;
+    opacity: 0.6;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+
+.container img {
+  width: 100%;
+  height: 280px;
+  background-color: black;
+  box-sizing: border-box;
+  margin: 6px 0px;
+  display: block;
+  border: 1px solid darkslateblue;
+  animation: updown 3s ease-in-out 3s 1 normal;
+  transition: all 2s;
+  object-fit: contain
+}
+
+
+hr {
+  height: 1px;
+  background-color: black;
+}
+
+footer {
+  background-color: grey;
+  position: sticky;
+  z-index: 1;
+  bottom: 0;
+}
+footer p {
+  text-align: center;
+  font-family: "roboto", sans-serif;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    background-color: gray;
+  }
+
+  header nav ul li {
+    background-color: black;
+    font-size: 8px;
+    padding: 2px;
+  }
+
+  .column {
+    width: 90%;
+  }
+
+  .quote {
+    font-size: 10px;
+  }
+
+  body {
+    background-color: black;
+    color: white;
+  }
+
+  .container img{
+    width: 100%;
+    height: auto;
+  }
+}
